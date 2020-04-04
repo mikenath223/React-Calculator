@@ -6,23 +6,12 @@ import '../Normalize.css';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      input: '',
-    };
-  }
-
-  render() {
-    return (
-      <div className="main-container">
-        <h1>The Calculator</h1>
-        <Display />
-        <ButtonPanel />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="main-container">
+    <h1>The Calculator</h1>
+    <Display />
+    <ButtonPanel />
+  </div>
+);
 
 export default App;

@@ -1,5 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Button = props => <button className={`button ${props.classname}`}>{props.name}</button>;
+const Button = props => {
+  const { classname, name } = props;
+  return (
+    <button type="submit" className={`button ${classname}`}>{name}</button>
+  );
+};
+
+Button.propTypes = {
+  classname: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
 
 export default Button;
