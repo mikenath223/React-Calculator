@@ -1,0 +1,40 @@
+body {
+  min-height: 99vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main-container {
+  max-width: 700px;
+  min-width: 300px;
+  height: 600px;
+}
+
+.display {
+  background-color: gray;
+  color: #fff;
+}
+
+.button, .display {
+  height: 100px;
+}
+
+.button {
+  color: #000;
+}
+
+.display {
+  width: 100%;
+}
+
+.milky {
+  background-color: #E0E0E0;
+  border: 1px solid #D1D1D1;
+}
+
+.orange {
+  border: 1px solid #BABABA;
+  background-color: #F5913E;
+}
