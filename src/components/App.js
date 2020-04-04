@@ -16,7 +16,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="main-container">
         <h1>The Calculator</h1>
         <Display />
         <ButtonPanel />

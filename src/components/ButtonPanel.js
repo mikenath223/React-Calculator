@@ -37,7 +37,7 @@ class ButtonPanel extends React.Component {
           {this.renderButton('orange', '+')}
         </div>
         <div>
-          {this.renderButton('milky', '0')}
+          {this.renderButton('milky grow', '0')}
           {this.renderButton('milky', '.')}
           {this.renderButton('orange', '=')}
         </div>
