@@ -1,12 +1,12 @@
 import React from 'react';
-import Button from "./Button";
+import Button from './Button';
 
 
 class ButtonPanel extends React.Component {
   renderButton(c, n) {
     return (
       <Button classname={c} name={n} />
-    )
+    );
   }
 
   render() {
@@ -42,7 +42,7 @@ class ButtonPanel extends React.Component {
           {this.renderButton('orange', '=')}
         </div>
       </div>
-    )
+    );
   }
 }
 

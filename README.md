@@ -9,8 +9,9 @@ This is a calculator built with the React Javascrupt framework.
 
 ### `Built with`
 * React
+* EsLint
+* VSCode
 * Windows
-* Love and Passion💜 for Code
 
 ### `Live Demo`
 * Find the app in this [Live Demo LInk](https://calcdig.herokuapp.com/)

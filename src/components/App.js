@@ -1,9 +1,9 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import '../style.css';
-import '../Normalize.css'
+import '../Normalize.css';
 // import Big from 'big-js';
-import ButtonPanel from './ButtonPanel'
+import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 
 class App extends React.Component {
@@ -11,7 +11,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       input: '',
-    }
+    };
   }
 
   render() {
@@ -21,7 +21,7 @@ class App extends React.Component {
         <Display />
         <ButtonPanel />
       </div>
-    )
+    );
   }
 }
 

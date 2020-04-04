@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Display = () => <div className="display"></div>
+const Display = () => <div className="display" />;
 
 export default Display;
