@@ -19,11 +19,12 @@ class App extends React.Component {
   }
 
   render() {
+    const { input } = this.state;
     return (
       <div className="main-container">
         <h1>The Calculator</h1>
-        <Display output={this.state.input} />
-        <ButtonPanel onClick={i => this.handleClick(i)} />
+        <Display output={input} />
+        <ButtonPanel onClick={i => this.handleClick(i).bind(this)} />
       </div>
     );
   }

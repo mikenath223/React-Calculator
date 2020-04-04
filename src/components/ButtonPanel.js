@@ -1,16 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 class ButtonPanel extends React.Component {
-  renderButton = (c, n, width, col) => (
-    <Button 
-    classname={c} 
-    name={n}
-    onClick={() => this.props.onClick(n)}
-    wide={width}
-    color={col}
-    />
-  );
+  renderButton(c, n, width, col) {
+    const { onClick } = this.props;
+    return (
+      <Button
+        classname={c}
+        name={n}
+        onClick={() => onClick(n)}
+        wide={width}
+        color={col}
+      />
+    );
+  }
 
   render() {
     return (
@@ -48,5 +52,9 @@ class ButtonPanel extends React.Component {
     );
   }
 }
+
+ButtonPanel.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
 
 export default ButtonPanel;
