@@ -1,13 +1,19 @@
-import 
+import operate from './operate'
 
-export default (obj, buttonName) => {
+const calculate = (obj, buttonName) => {
   const isNum = (testStr) => {
     return /\d/.test(testStr)
   }
 
+  // obj = {
+  //   total: null,
+  //   next: null,
+  //   operation: null
+  // }
+
   if (isNum(buttonName)) {
     if (obj.next) {
-
+      
     }
   }
 }
