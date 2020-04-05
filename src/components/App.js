@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style.css';
 import '../Normalize.css';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
