@@ -10,7 +10,7 @@ const operator = (num1, num2, operand) => {
     return x.minus(y).toString()
   } else if (operand === '÷') {
     return x.div(y).toString()
-  } else if(operand === '*') {
+  } else if(operand === 'x') {
     return x.mul(y).toString()
   } else if(operand === '%') {
     return x.mod(y).toString()

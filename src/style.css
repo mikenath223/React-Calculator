@@ -15,7 +15,6 @@ body > div {
   margin: -80px auto 0 auto;
   max-width: 700px;
   min-width: 300px;
-  height: 600px;
 }
 
 .display {
@@ -25,6 +24,12 @@ body > div {
   font-size: 2.8em;
   padding-top: 55px;
   width: 100%;
+  position: relative;
+  overflow-x: scroll;
+}
+
+.display::-webkit-scrollbar {
+  display: none;
 }
 
 .button, .display {
