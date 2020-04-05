@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Button = props => {
   const { classname, name } = props;
   return (
-    <button type="submit" className={`button ${classname}`}>{name}</button>
+    <button type="submit" name={name} className={`button ${classname}`}>{name}</button>
   );
 };
 
