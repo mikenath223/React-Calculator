@@ -23,22 +23,23 @@ class App extends React.Component {
     return (
       <div className="main-container">
         <h1>
-        <span>T</span>
-        <span>H</span>
-        <span>E</span>
-        <span> </span>
-        <span>C</span>
-        <span>A</span>
-        <span>L</span>
-        <span>C</span>
-        <span>U</span>
-        <span>L</span>
-        <span>A</span>
-        <span>T</span>
-        <span>O</span>
-        <span>R</span>
+          <span>T</span>
+          <span>H</span>
+          <span>E</span>
+          <span> </span>
+          <span>C</span>
+          <span>A</span>
+          <span>L</span>
+          <span>C</span>
+          <span>U</span>
+          <span>L</span>
+          <span>A</span>
+          <span>T</span>
+          <span>O</span>
+          <span>R</span>
         </h1>
-        <Display output={this.state.total || this.state.next || '0'}
+        <Display output={this.state.total || '0'}
+          input={this.state.next || '_'}
         />
         <ButtonPanel clickHandle={this.handleClick}
         />

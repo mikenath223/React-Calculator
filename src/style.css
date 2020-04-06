@@ -1,13 +1,21 @@
-
 body {
   min-height: 99vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
 }
 
-body > div {
+body>div {
   width: 90%;
 }
 
@@ -17,19 +25,54 @@ body > div {
   min-width: 300px;
 }
 
+.main-container h1 {
+  text-shadow: 0 2px white;
+  font-weight: bold;
+  color: #b8bec5;
+}
+
 .display {
   background-color: gray;
   color: #fff;
   text-align: right;
   font-size: 2.8em;
-  padding-top: 55px;
   width: 100%;
+  padding-right: 4px;
   position: relative;
   overflow-x: scroll;
 }
 
 .display::-webkit-scrollbar {
   display: none;
+}
+
+.display .input {
+  font-size: 0.6em;
+  margin-top: 2px;
+  margin-bottom: 18px;
+}
+
+.blink {
+  -webkit-animation: blink 1.2s infinite linear;
+  animation: blink 1.2s infinite linear;
+}
+
+@-webkit-keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .button, .display {

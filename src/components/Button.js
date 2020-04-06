@@ -21,7 +21,12 @@ Button.propTypes = {
   name: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   wide: PropTypes.bool.isRequired,
-  click: PropTypes.func.isRequired,
+  clickHandle: PropTypes.func.isRequired,
 };
+
+Button.defaultProps = {
+  color: '#F5913E',
+};
+
 
 export default Button;
