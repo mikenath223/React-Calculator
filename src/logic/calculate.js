@@ -27,7 +27,7 @@ const calculate = (data, buttonName) => {
 
     if ((buttonName === '-') && (data.operation !== null && data.operation.endsWith('n'))) {
       return {
-        next: 'null',
+        next: null,
         operation: null
       }
     }
@@ -49,7 +49,7 @@ const calculate = (data, buttonName) => {
   }
 
   if ((buttonName === '.')) {
-    if (isOp(data.next.charAt(data.next.length - 1))) {
+    if (isOp(data.next.charAt(data.next.length - 1)) || data.next.endsWith('.')) {
       return {}
     }
     return {
@@ -57,46 +57,55 @@ const calculate = (data, buttonName) => {
     }
   }
 
-  if (buttonName === '=') {
-  }
-
   if (buttonName === '+/-') {
-    if (!data.next) {
-      return {
-        next: '-',
-        operation: data.operation + 'n'
-      }
-    }
-    if (!data.operation) {
-      return {
-        next: '-' + data.next,
-        operation: 'n'
-      }
-    }
-    if (data.operation === 'n') {
+    // if (!data.next) {
+    //   return {
+    //     next: '-',
+    //     operation: data.operation + 'n'
+    //   }
+    // }
+    // if (!data.operation) {
+    //   return {
+    //     next: '-' + data.next,
+    //     operation: 'n'
+    //   }
+    // }
+    // if (data.operation === 'n') {
+    //   return {
+    //     next: data.next.slice(1),
+    //     operation: null
+    //   }
+    // }
+    // if ((data.operation !== null) && (data.operation.endsWith('-') || data.operation.endsWith('n'))) {
+    //   if (data.operation.length > 1) {
+    //     return {
+    //       next: data.next.slice(0, data.next.length - 1),
+    //       operation: data.operation.slice(0, data.operation.length - 1)
+    //     }
+    //   }
+    // }
+    // if (data.next.startsWith('-') && data.next.length === 1) {
+    //   return {
+    //     next: data.next.slice(1),
+    //     operation: null
+    //   }
+    // }
+    if (data.next.startsWith('-') && data.next.length < 28) {
       return {
         next: data.next.slice(1),
         operation: null
       }
     }
-    if (((data.operation !== null) && (data.operation.length > 1)) && (data.operation.endsWith('-') || data.operation.endsWith('n'))) {
-      return {
-        next: data.next.slice(0, data.next.length - 1),
-        operation: data.operation.slice(0, data.operation.length - 1)
-      }
-    }
-    if (data.next.startsWith('-') && data.next.length < 1) {
-      return {
-        next: 'data.next.slice(1)',
-        operation: null
-      }
-    }
+
     return {
-      next: data.next + '-',
-      operation: data.operation + 'n'
+      next: '-' + data.next,
+      operation: 'n'
     }
   }
 
+  if (buttonName === '=') {
+    
+  }
 
 
 }
