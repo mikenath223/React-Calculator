@@ -39,6 +39,8 @@ body > div {
 .button {
   color: #000;
   cursor: pointer;
+  font-size: 2em;
+  font-weight: 700;
 }
 
 .milky {
