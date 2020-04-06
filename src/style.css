@@ -52,6 +52,10 @@ body>div {
   margin-bottom: 18px;
 }
 
+.hide {
+  display: none;
+}
+
 .blink {
   -webkit-animation: blink 1.2s infinite linear;
   animation: blink 1.2s infinite linear;

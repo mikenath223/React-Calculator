@@ -98,10 +98,9 @@ const calculate = (data, buttonName) => {
       };
     }
 
-    if (!data.operation) data.operation = '';
     return {
       next: `-${data.next}`,
-      operation: `n${data.operation}`,
+      operation: `n${data.operation || ''}`,
     };
   }
 
@@ -126,6 +125,8 @@ const calculate = (data, buttonName) => {
       operation: null,
     };
   }
+
+  return {};
 };
 
 export default calculate;

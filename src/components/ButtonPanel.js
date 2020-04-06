@@ -4,7 +4,8 @@ import Button from './Button';
 
 class ButtonPanel extends React.Component {
   clickHandler(n) {
-    this.props.clickHandle(n);
+    const { clickHandle } = this.props;
+    clickHandle(n);
   }
 
   renderButton(c, n, width, col) {

@@ -22,6 +22,7 @@ class App extends React.Component {
   }
 
   render() {
+    const { total, next, operation } = this.state;
     return (
       <div className="main-container">
         <h1>
@@ -39,10 +40,11 @@ class App extends React.Component {
           <span>T</span>
           <span>O</span>
           <span>R</span>
+          <span className="hide">{operation}</span>
         </h1>
         <Display
-          output={this.state.total || '0'}
-          input={this.state.next || '_'}
+          output={total || '0'}
+          input={next || '_'}
         />
         <ButtonPanel clickHandle={n => this.handleClick(n)} />
       </div>

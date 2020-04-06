@@ -16,7 +16,8 @@ const Display = props => {
 };
 
 Display.propTypes = {
-  output: PropTypes.string.isRequired,
+  output: PropTypes.string,
+  input: PropTypes.string.isRequired,
 };
 
 Display.defaultProps = {
