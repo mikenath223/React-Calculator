@@ -1,28 +1,12 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import '../style.css';
 import '../Normalize.css';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 import calculate from '../logic/calculate';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-  }
-
-  handleClick(n) {
-    this.setState(state => (
-      calculate(state, n)
-    ));
-  }
-
+class App extends PureComponent {
   render() {
-    const { total, next, operation } = this.state;
     return (
       <div className="main-container">
         <h1>
@@ -40,13 +24,13 @@ class App extends React.Component {
           <span>T</span>
           <span>O</span>
           <span>R</span>
-          <span className="hide">{operation}</span>
+          <span className="hide">{calculate}</span>
         </h1>
         <Display
-          output={total || '0'}
-          input={next || '_'}
+          output="0"
+          input="_"
         />
-        <ButtonPanel clickHandle={n => this.handleClick(n)} />
+        <ButtonPanel />
       </div>
     );
   }
