@@ -39,12 +39,33 @@ const calculate = (data, buttonName) => {
     }
   }
 
+  const chkErr = message => {
+    if (message.includes('ERROR')) {
+      return {
+        total: message,
+        next: null,
+        operation: null,
+      };
+    }
+    return '';
+  };
+
   if (isOp(buttonName)) {
-    if (!!data.operation && !isOp(data.next.charAt(data.next.length - 1))) {
+    const len = !!data.operation && data.operation.length;
+    if (!!data.operation && (len >= 1) && !isOp(data.next.charAt(data.next.length - 1))) {
+      if (isOp(data.next.charAt(data.next.length - 1))) {
+        return {
+          next: data.next + buttonName,
+          operation: (data.operation || '') + buttonName,
+        };
+      }
       const op = data.operation.charAt(data.operation.length - 1);
       const nums = data.next.split(/\+|-|x|÷|%/);
-      if ((data.operation.startsWith('n')) || data.next.startsWith('-')) {
+      if (data.operation.startsWith('n') || data.next.startsWith('-')) {
         const res = operator(`-${nums[1]}`, nums[2], op);
+        if (chkErr(res)) {
+          return chkErr(res);
+        }
         return {
           total: res,
           next: res + buttonName,
@@ -52,6 +73,9 @@ const calculate = (data, buttonName) => {
         };
       }
       const res = operator(nums[0], nums[1], op);
+      if (chkErr(res)) {
+        return chkErr(res);
+      }
       return {
         total: res,
         next: res + buttonName,
@@ -65,6 +89,7 @@ const calculate = (data, buttonName) => {
         operation: (data.operation || '') + buttonName,
       };
     }
+    return {};
   }
 
   if ((buttonName === '.')) {
@@ -112,6 +137,9 @@ const calculate = (data, buttonName) => {
     const nums = data.next.split(/\+|-|x|÷|%/);
     if (data.operation.startsWith('n') || data.next.startsWith('-')) {
       const res = operator(`-${nums[1]}`, nums[2], op);
+      if (chkErr(res)) {
+        return chkErr(res);
+      }
       return {
         total: res,
         next: res,
@@ -119,6 +147,9 @@ const calculate = (data, buttonName) => {
       };
     }
     const res = operator(nums[0], nums[1], op);
+    if (chkErr(res)) {
+      return chkErr(res);
+    }
     return {
       total: res,
       next: res,
