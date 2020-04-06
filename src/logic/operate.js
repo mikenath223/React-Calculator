@@ -1,22 +1,22 @@
-import Big from 'big.js'
+import Big from 'big.js';
 
 const operator = (num1, num2, operand) => {
-  let x = Big(num1)
-  let y = Big(num2)
+  const x = Big(num1);
+  const y = Big(num2);
 
   if (operand === '+') {
-    return x.plus(y).toString()
-  } else if (operand === '-') {
-    return x.minus(y).toString()
-  } else if (operand === '÷') {
-    return x.div(y).toString()
-  } else if (operand === 'x') {
-    return x.mul(y).toString()
-  } else if (operand === '%') {
-    return x.mod(y).toString()
+    return x.plus(y).toString();
+  } if (operand === '-') {
+    return x.minus(y).toString();
+  } if (operand === '÷') {
+    return x.div(y).toString();
+  } if (operand === 'x') {
+    return x.mul(y).toString();
+  } if (operand === '%') {
+    return x.mod(y).toString();
   }
-  throw Error('Error')
-}
+  throw Error('Error');
+};
 
 
 export default operator;

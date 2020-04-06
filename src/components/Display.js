@@ -5,7 +5,7 @@ const Display = props => {
   const { output, input } = props;
   let blinkClass = 'blink';
   if (input.length > 1) {
-    blinkClass = ''
+    blinkClass = '';
   }
   return (
     <div className="display">

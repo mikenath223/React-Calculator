@@ -3,7 +3,7 @@ import '../style.css';
 import '../Normalize.css';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
-import calculate from '../logic/calculate'
+import calculate from '../logic/calculate';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,12 +11,14 @@ class App extends React.Component {
     this.state = {
       total: null,
       next: null,
-      operation: null
+      operation: null,
     };
   }
 
-  handleClick = (n) => {
-    this.setState(calculate(this.state, n));
+  handleClick(n) {
+    this.setState(state => (
+      calculate(state, n)
+    ));
   }
 
   render() {
@@ -38,11 +40,11 @@ class App extends React.Component {
           <span>O</span>
           <span>R</span>
         </h1>
-        <Display output={this.state.total || '0'}
+        <Display
+          output={this.state.total || '0'}
           input={this.state.next || '_'}
         />
-        <ButtonPanel clickHandle={this.handleClick}
-        />
+        <ButtonPanel clickHandle={n => this.handleClick(n)} />
       </div>
     );
   }

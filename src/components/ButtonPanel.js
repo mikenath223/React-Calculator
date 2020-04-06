@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 
 class ButtonPanel extends React.Component {
-  clickHandler = (n) => {
-    this.props.clickHandle(n)
+  clickHandler(n) {
+    this.props.clickHandle(n);
   }
 
   renderButton(c, n, width, col) {
-
     return (
       <Button
         classname={c}
         name={n}
-        clickHandle={this.clickHandler}
+        clickHandle={n => this.clickHandler(n)}
         wide={width}
         color={col}
       />

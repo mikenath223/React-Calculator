@@ -19,7 +19,7 @@ const Button = props => {
 Button.propTypes = {
   classname: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string,
   wide: PropTypes.bool.isRequired,
   clickHandle: PropTypes.func.isRequired,
 };
