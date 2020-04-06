@@ -90,21 +90,25 @@ const calculate = (data, buttonName) => {
     //     operation: null
     //   }
     // }
-    if (data.next.startsWith('-') && data.next.length < 28) {
+    if (data.operation.startsWith('-') && data.next.length < 28) {
       return {
         next: data.next.slice(1),
-        operation: null
+        operation: data.operation.slice(1)
       }
     }
 
     return {
       next: '-' + data.next,
-      operation: 'n'
+      operation: 'n' + data.operation
     }
   }
 
   if (buttonName === '=') {
-    
+    return {
+      total: eval(data.next.replace('x', '*').replace('÷', '/')),
+      next: null,
+      operation: null,
+    }
   }
 
 
