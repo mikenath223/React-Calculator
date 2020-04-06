@@ -1,3 +1,9 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
 <p align="center">
   <a href="https://www.ruby-lang.org/en/">
     <img src="https://img.shields.io/badge/React-v16.3.1-brightgreen.svg" alt="ruby version">
@@ -9,8 +15,9 @@ This is a calculator built with the React Javascrupt framework.
 
 ### `Built with`
 * React
+* EsLint
+* VSCode
 * Windows
-* Love and Passion💜 for Code
 
 ### `Live Demo`
 * Find the app in this [Live Demo LInk](https://calcdig.herokuapp.com/)
@@ -59,3 +66,37 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# Authors
+
+**Michgolden Ukeje**
+
+- Github: [@mikenath223](https://github.com/mikenath223)
+- Twitter: [@Michgolden_Nath](https://twitter.com/MichgoldenU)
+- Linkedin: [Ukeje Michgolden](https://https://www.linkedin.com/in/michgoldenukeje/)
+  <br />
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## Acknowledgements
+
+- [Microverse](https://www.microverse.org/)
+- [The Odin Project](https://www.theodinproject.com/)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/mikenath223/React-Calculator.svg?style=flat-square
+[contributors-url]: https://github.com/mikenath223/React-Calculator/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/mikenath223/React-Calculator
+[forks-url]: https://github.com/mikenath223/React-Calculator/network/members
+[stars-shield]: https://img.shields.io/github/stars/mikenath223/React-Calculator
+[stars-url]: https://github.com/mikenath223/React-Calculator/stargazers
+[issues-shield]: https://img.shields.io/github/issues/mikenath223/React-Calculator
+[issues-url]: https://github.com/mikenath223/React-Calculator/issues
+[license-shield]: https://img.shields.io/github/license/mikenath223/React-Calculator
+[license-url]: https://github.com/mikenath223/React-Calculator/blob/master/LICENSE.txt
