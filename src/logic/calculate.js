@@ -9,10 +9,6 @@ const calculate = (data, buttonName) => {
     return /\+|-|x|÷|%/.test(testStr)
   };
 
-  const runOperate = () => {
-
-  }
-
   if (buttonName === 'AC') {
     return {
       total: null,
@@ -37,29 +33,29 @@ const calculate = (data, buttonName) => {
 
     if (isOp(buttonName) || (buttonName === '.') || (buttonName === '%')) {
       return {
-        next: '0' + buttonName
+        next: '0' + buttonName,
+        operation: buttonName
       }
     }
   }
 
   if (isOp(buttonName)) {
-    if (!!data.operation && ((data.operation.startsWith('n') && (data.operation.length > 1)) || !(data.operation.startsWith('n')))) {
+    if (!!data.operation && !isOp(data.next.charAt(data.next.length - 1))) {
       const op = data.operation.charAt(data.operation.length - 1)
       const nums = data.next.split(/\+|-|x|÷|%/)
-      if (data.operation.startsWith('n')) {
+      if ((data.operation.startsWith('n')) || data.next.startsWith('-')) {
         let res = operator(`-${nums[1]}`, nums[2], op)
         return {
           total: res,
-          next: res,
-          operation: null,
+          next: res + buttonName,
+          operation: buttonName,
         }
-      } else {
-        let res = operator(nums[0], nums[1], op);
-        return {
-          total: res,
-          next: res,
-          operation: null,
-        }
+      }
+      let res = operator(nums[0], nums[1], op);
+      return {
+        total: res,
+        next: res + buttonName,
+        operation: buttonName,
       }
     }
 
@@ -103,6 +99,9 @@ const calculate = (data, buttonName) => {
   }
 
   if (buttonName === '=') {
+    if (isOp(data.next.charAt(data.next.length - 1))) {
+      return {}
+    }
     const op = data.operation.charAt(data.operation.length - 1)
     const nums = data.next.split(/\+|-|x|÷|%/)
     if (data.operation.startsWith('n')) {
