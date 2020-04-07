@@ -25,19 +25,38 @@ body>div {
   min-width: 300px;
 }
 
+.main-container .ops {
+  color: #EC3711;
+}
+
+.buttonPanel .enter {
+  color: #fff;
+}
+
 .main-container h1 {
   text-shadow: 0 2px white;
   font-weight: bold;
   color: #b8bec5;
 }
 
+.main-container h1 span:nth-child(odd) {
+  -webkit-animation: blink 2s infinite linear;
+          animation: blink 2s infinite linear;
+}
+
 .display {
   background-color: gray;
+  border: 2px solid #EC3711;
+  border-bottom: 1px solid #101628;
+  -webkit-border-top-left-radius: 10px;
+          border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+          border-top-right-radius: 10px;
   color: #fff;
   text-align: right;
   font-size: 2.5em;
   width: 100%;
-  padding-right: 4px;
+  padding-right: 8px;
   position: relative;
   overflow-x: scroll;
 }
@@ -48,12 +67,21 @@ body>div {
 
 .display .input {
   font-size: 0.6em;
-  margin-top: 10px;
-  margin-bottom: 22px;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
 .hide {
   display: none;
+}
+
+.buttonPanel {
+  border: 2px solid #101628;
+  overflow: hidden;
+  -webkit-border-bottom-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+          border-bottom-right-radius: 10px;
 }
 
 .blink {
@@ -91,9 +119,9 @@ body>div {
 }
 
 .milky {
-  border: 1px solid #D1D1D1;
+  border: 1px solid rgb(204, 172, 172);
 }
 
 .orange {
-  border: 1px solid #BABABA;
+  border: 1px solid rgb(231, 154, 154);
 }

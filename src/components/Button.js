@@ -5,7 +5,7 @@ const Button = props => {
   const {
     classname, name, color, wide, clickHandle,
   } = props;
-  const col = color || '#F5913E';
+  const col = color || '#101628';
   const dim = wide === true ? '50%' : '25%';
   const styles = {
     backgroundColor: col,
@@ -25,7 +25,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  color: '#F5913E',
+  color: '#101628',
 };
 
 
