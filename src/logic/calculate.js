@@ -50,18 +50,20 @@ const calculate = (data, buttonName) => {
     return '';
   };
 
+
   if (isOp(buttonName)) {
-    const len = !!data.operation && data.operation.length;
-    if (!!data.operation && (len >= 1) && !isOp(data.next.charAt(data.next.length - 1))) {
-      if (isOp(data.next.charAt(data.next.length - 1))) {
-        return {
-          next: data.next + buttonName,
-          operation: (data.operation || '') + buttonName,
-        };
-      }
-      const op = data.operation.charAt(data.operation.length - 1);
+    if (isOp(data.next.charAt(data.next.length - 1))) {
+      return {};
+    }
+    let len;
+    if (data.operation) {
+      len = data.operation.length;
+    }
+
+    if (len > 0) {
       const nums = data.next.split(/\+|-|x|÷|%/);
-      if (data.operation.startsWith('n') || data.next.startsWith('-')) {
+      const op = data.operation.charAt(0);
+      if (data.next.startsWith('-')) {
         const res = operator(`-${nums[1]}`, nums[2], op);
         if (chkErr(res)) {
           return chkErr(res);
@@ -83,14 +85,12 @@ const calculate = (data, buttonName) => {
       };
     }
 
-    if (!isOp(data.next.charAt(data.next.length - 1))) {
-      return {
-        next: data.next + buttonName,
-        operation: (data.operation || '') + buttonName,
-      };
-    }
-    return {};
+    return {
+      next: data.next + buttonName,
+      operation: (data.operation || '') + buttonName,
+    };
   }
+
 
   if ((buttonName === '.')) {
     if (isOp(data.next.charAt(data.next.length - 1)) || data.next.endsWith('.')) {
@@ -102,16 +102,15 @@ const calculate = (data, buttonName) => {
   }
 
   if (buttonName === '+/-') {
-    if ((!!data.operation && data.operation.startsWith('n')) && data.next.length < 28) {
+    if (!!data.next && data.next.startsWith('-') && !!data.total && data.total.startsWith('-')) {
       return {
+        total: data.total.slice(1),
         next: data.next.slice(1),
-        operation: data.operation.slice(1),
       };
     }
 
     if (!!data.next && data.next.startsWith('-')) {
       return {
-        total: data.total.slice(1),
         next: data.next.slice(1),
       };
     }
@@ -119,13 +118,11 @@ const calculate = (data, buttonName) => {
     if (!data.next) {
       return {
         next: `-${0}`,
-        operation: 'n',
       };
     }
 
     return {
       next: `-${data.next}`,
-      operation: `n${data.operation || ''}`,
     };
   }
 
@@ -133,9 +130,9 @@ const calculate = (data, buttonName) => {
     if (isOp(data.next.charAt(data.next.length - 1))) {
       return {};
     }
-    const op = data.operation.charAt(data.operation.length - 1);
+    const op = data.operation.charAt(0);
     const nums = data.next.split(/\+|-|x|÷|%/);
-    if (data.operation.startsWith('n') || data.next.startsWith('-')) {
+    if (data.next.startsWith('-')) {
       const res = operator(`-${nums[1]}`, nums[2], op);
       if (chkErr(res)) {
         return chkErr(res);
