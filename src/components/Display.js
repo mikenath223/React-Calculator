@@ -2,20 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Display = props => {
-  const { result } = props;
+  const { output, input } = props;
+  let blinkClass = 'blink';
+  if (input.length > 1) {
+    blinkClass = '';
+  }
   return (
-    <div>
-      <div className="display">{result}</div>
+    <div className="display">
+      <p className={`input ${blinkClass}`}>{input}</p>
+      <p>{output}</p>
     </div>
   );
 };
 
 Display.propTypes = {
-  result: PropTypes.string,
+  output: PropTypes.string,
+  input: PropTypes.string.isRequired,
 };
 
 Display.defaultProps = {
-  result: '0',
+  output: '0',
 };
 
 export default Display;
