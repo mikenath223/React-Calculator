@@ -1,8 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-## Available Scripts
+<p align="center">
+  <a href="https://www.ruby-lang.org/en/">
+    <img src="https://img.shields.io/badge/React-v16.3.1-brightgreen.svg" alt="ruby version">
+  </a>
+</p>
 
-In the project directory, you can run:
+## React-Calculator
+This is a calculator built with the React Javascrupt framework.
+
+### `Built with`
+* React
+* EsLint
+* VSCode
+* Windows
+
+### `Live Demo`
+* Find the app in this [Live Demo LInk](https://calcdig.herokuapp.com/)
+
+### `Getting Started`
+Run these commands:
+* git clone git@github.com:mikenath223/React-Calcuator.git 
+* cd React-Calcuator
+* npm install
 
 ### `npm start`
 
@@ -43,26 +67,36 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+# Authors
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+**Michgolden Ukeje**
 
-### Analyzing the Bundle Size
+- Github: [@mikenath223](https://github.com/mikenath223)
+- Twitter: [@Michgolden_Nath](https://twitter.com/MichgoldenU)
+- Linkedin: [Ukeje Michgolden](https://https://www.linkedin.com/in/michgoldenukeje/)
+  <br />
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+# License
 
-### Making a Progressive Web App
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<!-- ACKNOWLEDGEMENTS -->
 
-### Advanced Configuration
+## Acknowledgements
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+- [Microverse](https://www.microverse.org/)
+- [The Odin Project](https://www.theodinproject.com/)
 
-### Deployment
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[contributors-shield]: https://img.shields.io/github/contributors/mikenath223/React-Calculator.svg?style=flat-square
+[contributors-url]: https://github.com/mikenath223/React-Calculator/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/mikenath223/React-Calculator
+[forks-url]: https://github.com/mikenath223/React-Calculator/network/members
+[stars-shield]: https://img.shields.io/github/stars/mikenath223/React-Calculator
+[stars-url]: https://github.com/mikenath223/React-Calculator/stargazers
+[issues-shield]: https://img.shields.io/github/issues/mikenath223/React-Calculator
+[issues-url]: https://github.com/mikenath223/React-Calculator/issues
+[license-shield]: https://img.shields.io/github/license/mikenath223/React-Calculator
+[license-url]: https://github.com/mikenath223/React-Calculator/blob/master/LICENSE.txt
